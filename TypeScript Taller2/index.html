@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Taller TypeScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <script type="module" src="./scripts/main.js"></script>
+
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            display: flex; /* Usar flexbox para alinear la tabla y la descripción */
+            justify-content: center; /* Centrar el contenido horizontalmente */
+            align-items: flex-start; /* Alinear la tabla y la imagen en la parte superior */
+        }
+
+        table {
+            width: 60%; /* Ajusta el ancho de la tabla */
+            margin: 20px; /* Margen alrededor de la tabla */
+            border-collapse: collapse;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        thead {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        td {
+            color: #555;
+        }
+
+        .table {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #promedio {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* Estilos para la imagen y descripción */
+        .serie-info {
+            margin-left: 20px; /* Espacio entre la tabla y la información de la serie */
+            width: 30%; /* Ancho de la sección de información de la serie */
+            text-align: center; /* Centrar el contenido */
+        }
+
+        .serie-info img {
+            max-width: 100%; /* Ajustar la imagen para que no desborde */
+            border-radius: 5px; /* Bordes redondeados para la imagen */
+        }
+
+        /* Responsivo para pantallas pequeñas */
+        @media screen and (max-width: 600px) {
+            table {
+                width: 100%;
+            }
+
+            th, td {
+                text-align: center;
+            }
+
+            .container {
+                flex-direction: column; /* Apilar la tabla y la información en pantallas pequeñas */
+                align-items: center; /* Centrar el contenido en pantallas pequeñas */
+            }
+
+            .serie-info {
+                width: 90%; /* Ancho completo en pantallas pequeñas */
+                margin-left: 0; /* Sin margen en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Taller TypeScript</h1>    
+    <h2>Series</h2>
+    <div class="container">
+        <table class="table" id="series">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Canal</th>
+                    <th>Temporadas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- El cuerpo de la tabla será llenado dinámicamente por TypeScript -->
+            </tbody>
+        </table>
+        
+        <div class="serie-info">
+            <img id="serie-imagen" src="" alt="Imagen de la serie" />
+            <p id="serie-descripcion"></p>
+        </div>
+    </div>
+
+    <p id="promedio"></p> <!-- Aquí se mostrará el promedio -->
+</body>
+</html>
